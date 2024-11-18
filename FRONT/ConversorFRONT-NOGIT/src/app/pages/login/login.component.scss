@@ -1,0 +1,145 @@
+
+
+/* Estilos específicos para el logo */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #2196F3, #673AB7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  main{
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%), url("/Images/DALL.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  box-sizing: border-box;
+  
+}
+  /* Contenedor principal */
+  .login-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+  }
+  
+  /* Estilos para los contenedores username y password */
+  .username,
+  .password {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Estilos para las etiquetas */
+  .username label,
+  .password label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Estilos para los inputs */
+  .username input,
+  .password input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    border-color: #2196F3;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+    background: white;
+    box-sizing: border-box;
+  }
+  
+  /* Efectos hover y focus para los inputs */
+  .username input:hover,
+  .password input:hover {
+    border-color: #2196F3;
+  }
+  
+  
+  
+  /* Estilos para el placeholder */
+  input::placeholder {
+    color: #bbb;
+  }
+  
+  /* Estilos para el botón */
+  .button-colorido {
+    width: 100%;
+    background: linear-gradient(45deg, #2196F3, #673AB7);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .button-colorido2 {
+    width: 100%;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: rgb(255, 255, 255);
+    padding: 1rem;     
+    margin: 10px auto;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Estilos de validación para Angular */
+  input.ng-invalid.ng-touched {
+    border-color: #ff4444;
+  }
+  
+  input.ng-invalid.ng-touched:focus {
+    box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.1);
+  }
+  
+  /* Media queries para responsividad */
+  @media (max-width: 480px) {
+    .login-container {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+  
+    p {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Estilos adicionales para el fondo de la página */
+  body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ 

@@ -1,0 +1,52 @@
+<main>
+  
+  @if (this.dataAuthService.usuario?.subscriptionType == 3) {
+    <img src="/Images/crown_8181605.png" alt="z">
+  }
+  @else {
+    <img src="/Images/crownNopremium.png" alt="z">
+  }  
+  <div class="conversion-container">
+  <h2>Conversor de Monedas</h2>
+
+  @if (this.dataAuthService.usuario?.subscriptionType == 2) {
+    <p>Conversiones restantes: <strong>{{ remainingConversions }}</strong></p>
+  }
+
+  
+    
+  <form #ConversionForm="ngForm" (ngSubmit)="convertCurrency(ConversionForm)">
+    <!-- Selección de Moneda de Origen -->
+    <label for="fromCurrencyCode">De:</label>
+    <select id="fromCurrencyCode" name="fromCurrencyCode" ngModel required>
+      <option *ngFor="let currency of currencies" [value]="currency.code">
+        {{ currency.legend }} ({{ currency.symbol }})
+      </option>
+    </select>
+
+    <!-- Selección de Moneda de Destino -->
+    <label for="toCurrencyCode">A:</label>
+    <select id="toCurrencyCode" name="toCurrencyCode" ngModel required>
+      <option *ngFor="let currency of currencies" [value]="currency.code">
+        {{ currency.legend }} ({{ currency.symbol }})
+      </option>
+    </select>
+
+    <!-- Campo para Ingresar la Cantidad -->
+    <label for="amount">Cantidad:</label>
+    <input type="number" id="amount" name="amount" ngModel required />
+
+    <!-- Botón para Realizar la Conversión -->
+    <button [disabled]="ConversionForm.invalid" class="button-colorido" type="submit">Convertir</button>
+  </form>
+
+  <!-- Mostrar Resultado de la Conversión -->
+  
+    @if (conversionResult){
+      <p class="result">{{conversionResult.originalAmount}} {{conversionResult.fromCurrencyCode}} son aproximadamente {{conversionResult.convertedAmount}} {{conversionResult.toCurrencyCode}}</p>
+    }
+  
+</div>
+</main>
+
+
